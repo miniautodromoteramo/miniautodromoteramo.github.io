@@ -1,1 +1,124 @@
-draft
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.3/jquery.fullpage.min.css" integrity="sha256-xXOd9eFAMhs/5w0TA3hlrWJIKJ6h0Ns3KGz2iU9ATs4="
+        crossorigin="anonymous" />
+    <style>
+        .btn-outline-amt {
+            color: white;
+            background-image: none;
+            background-color: transparent;
+            border-color: white;
+            border: 2px solid;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        body {
+            color: white;
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <a class="navbar-brand" href="#">A</a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a data-menuanchor="home" class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a data-menuanchor="calendar" class="nav-link" href="#calendar">Calendario Gare</a>
+                </li>
+                <li class="nav-item">
+                    <a data-menuanchor="where" class="nav-link" href="#where">Dove</a>
+                </li>
+                <li class="nav-item">
+                    <a data-menuanchor="contacts" class="nav-link" href="#contacts">Contatti</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="fullpage">
+        <div class="section" id="homeSection">
+            <div class="slide container">
+                <h1>home</h1>
+                <p>something</p>
+            </div>
+        </div>
+        <div class="section" id="calendarSection">
+            <div class="slide container">
+                <h1>calendario gare</h1>
+                <p>something</p>
+            </div>
+        </div>
+        <div class="section" id="whereSection">
+            <div class="slide container">
+                <h1>whereSection</h1>
+                <p>something</p>
+            </div>
+        </div>
+        <div class="section" id="contactsSection">
+            <div class="slide container">
+                <h1>Contatti</h1>
+                <div class="row mt-5 text-center">
+                    <form method="POST" class="col" action="http://formspree.io/info@miniautodromoteramo.it">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="La tua email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" cols=40 rows=5 placeholder="Il tuo messaggio"></textarea>
+                        </div>
+                        <button class="col btn btn-outline-amt" type="submit">Invia</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.3/jquery.fullpage.min.js" integrity="sha256-bl5ARLWIfMg+NfcDcbOiniMFagD4A6089ff7gP6KdiM="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.3/jquery.fullpage.extensions.min.js" integrity="sha256-jc0yAKHU9/Fs1I5uM/0iJgBbD0LIs9/VmjZxBN07z5s="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                anchors: ['home', 'calendar', 'where', 'contacts'],
+                sectionsColor: ['#a94442', '#a94442', '#a94442', '#a94442', '#a94442'],
+                navigation: true,
+                /* navigationPosition: 'right',
+                 navigationTooltips: ['First page', 'Second page', 'Third and last page'],
+             */
+                verticalCentered: true,
+                responsiveWidth: 900,
+                dragAndMove: true,
+				dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+                slidesNavigation: true,
+                css3: true,
+                menu: '#menu',
+                scrollOverflow: false,
+                offsetSections: false,
+                afterResponsive: function (isResponsive) {
+
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
