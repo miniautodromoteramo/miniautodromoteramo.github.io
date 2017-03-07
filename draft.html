@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.3/jquery.fullpage.min.css" integrity="sha256-xXOd9eFAMhs/5w0TA3hlrWJIKJ6h0Ns3KGz2iU9ATs4="
@@ -18,12 +20,68 @@
             font-weight: bold;
             cursor: pointer;
         }
+        
+        .navbar {
+            /*background: transparent !important;*/
+        }
+        
         body {
             color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        h1 {
+            display: inline-block;
+            background: rgba(255, 0, 0, 0.33);
+            padding: .3em;
+        }
+        
+        p {
+            font-size: 1.2em;
+            text-align: justify;
+        }
+        
+        .container {
+            /*padding: 3em;
+            padding-top: 5em;*/
+        }
+        
+        #fullpage {
+            /*margin-top: 54px;*/
+        }
+        
+        #homeSection {
+            background: url('assets/track.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        
+        .slide-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            background: rgba(255, 0, 0, 0.52);
+            color: white;
+        }
+        
+        .slide-content-white {
+            background: rgba(255, 255, 255, 0.64);
+            display: table;
+            color: #b02e0e;
+            padding: .3em;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .slide-content-gray {
+            background: rgb(41, 43, 44);
+            display: table;
+            color: #b1b1b1;
+            padding: .3em;
+            text-align: left;
+            font-size: .8em;
+            font-weight: bold;
         }
     </style>
 </head>
-
 
 <body>
     <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
@@ -36,6 +94,12 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a data-menuanchor="home" class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a data-menuanchor="track" class="nav-link" href="#track">La Pista</a>
+                </li>
+                <li class="nav-item">
+                    <a data-menuanchor="story" class="nav-link" href="#story">Storia</span></a>
                 </li>
                 <li class="nav-item">
                     <a data-menuanchor="calendar" class="nav-link" href="#calendar">Calendario Gare</a>
@@ -52,8 +116,53 @@
     <div id="fullpage">
         <div class="section" id="homeSection">
             <div class="slide container">
-                <h1>home</h1>
-                <p>something</p>
+                <h1 class="slide-title">Miniautodromo di Teramo</h1>
+                <div class="slide-content">
+                    <p class="slide-content-white">Pista per Automodelli da Competizione radiocomandati in scala 1/8 e 1/10 a scoppio ed elettrici.</p>
+                    <p class="slide-content-gray">Copyright © 2017 - Associazione Modellistica Teramana</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="trackSection">
+            <div class="slide container">
+                <h1 class="slide-title">Il Tracciato</h1>
+                <!--<p><img class="col" src="assets/track.jpg" /></p>-->
+                <div class="slide-content">
+                    <p>
+                        Il tracciato ha una lunghezza di 295 metri, con un una larghezza minima di 4.5 metri.
+                    </p>
+                    <p> Nella parte opposta al palco di guida si trova il rettilineo con una lunghezza di 68 metri.
+                    </p>
+                    <p>Il senso di percorrenza è antiorario.
+                    </p>
+                    <p>La zona box si sviluppa su circa 70 metri, al cui interno ci sono oltre 60 box coperti (circa 1 metro
+                        a dispozione per ogni modellista) con presa di corrente a 220v.
+                        <p>In pista è presente anche la presa di corrente a 12v nelle due zone tornitura, con aria compressa.
+                        </p>
+                        <p>L'impianto dispone di servizio cronometraggio e rilevatore di velocità sul rettilineo principale.
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="storySection">
+            <div class="slide container">
+                <h1>La storia dal 1978 ad oggi</h1>
+                <p>Nel lontano 1978 un gruppo di amici modellisti Teramani (chiamatosi poi Associazione Modellistica Teramana),
+                    visto il crescente interesse per l'automodellismo radiocomandato a scoppio decise di realizzare un miniautodromo.
+                </p>
+                <p>
+                    Individuata la zona in cui costruirlo e fatta richiesta al comune di Teramo per un terreno adatto, il gruppo, autofinanziandosi,
+                    iniziò i lavori.
+                </p>
+                <p>Dopo circa un anno di duro lavoro e sacrifici il sogno prese vita e finalmente il miniautodromo iniziò a
+                    funzionare ospitando gare di tutti i livelli, dai campionati regionali alle selezioni per i campionati
+                    del mondo. Gli anni 90 segnarono purtroppo un periodo di decadimento per il miniautodrom che venne per
+                    un po' dimenticato, ma a maggio 2007 il Comune di Teramo da il via al ripristino totale dell’impianto,
+                    variando il percorso per ragioni di sicurezza.
+                </p>
+                <p>Il rettilineo viene spostato di fronte al palco di pilotaggio e viene fatta una variante al tracciato aumentando
+                    la lunghezza della pista di circa 40 mt. Ed ora... si corre!!</p>
             </div>
         </div>
         <div class="section" id="calendarSection">
@@ -98,8 +207,10 @@
     <script type="text/javascript">
         $(document).ready(function () {
             $('#fullpage').fullpage({
-                anchors: ['home', 'calendar', 'where', 'contacts'],
-                sectionsColor: ['#a94442', '#a94442', '#a94442', '#a94442', '#a94442'],
+                anchors: ['home', 'track', 'story', 'calendar', 'where', 'contacts'],
+                sectionsColor: ['#a31e1b', '#a31e1b', '#a31e1b', '#a31e1b', '#a31e1b', '#a31e1b',
+                    '#a31e1b'
+                ],
                 navigation: true,
                 /* navigationPosition: 'right',
                  navigationTooltips: ['First page', 'Second page', 'Third and last page'],
@@ -107,7 +218,7 @@
                 verticalCentered: true,
                 responsiveWidth: 900,
                 dragAndMove: true,
-				dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
+                dragAndMoveKey: 'YWx2YXJvdHJpZ28uY29tX0EyMlpISmhaMEZ1WkUxdmRtVT0wWUc=',
                 slidesNavigation: true,
                 css3: true,
                 menu: '#menu',
