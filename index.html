@@ -40,23 +40,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.3/jquery.fullpage.min.js" integrity="sha256-bl5ARLWIfMg+NfcDcbOiniMFagD4A6089ff7gP6KdiM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.3/jquery.fullpage.extensions.min.js" integrity="sha256-jc0yAKHU9/Fs1I5uM/0iJgBbD0LIs9/VmjZxBN07z5s=" crossorigin="anonymous"></script>
     <style>
-    .btn-outline-amt {
-        color: white;
-        background-image: none;
-        background-color: transparent;
-        border-color: white;
-        border: 2px solid;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    
     body {
         color: white;
         font-family: 'Open Sans', sans-serif !important;
+        text-transform: uppercase;
     }
     
     p {
         font-size: 1.2em;
+    }
+
+    button {
+        text-transform: uppercase !important;
     }
     
     a:hover {
@@ -67,28 +62,31 @@
         margin-top: 54px;
     }
     
+    .btn-outline-amt {
+        color: white;
+        background-image: none;
+        background-color: transparent;
+        border-color: white;
+        border: 2px solid;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
     .slide-title {
         color: black;
         font-weight: bold;
-        text-transform: uppercase;
         margin-top: 1em;
         font-size: 1.8em;
     }
     
     .slide-content {
         color: black;
-        text-transform: uppercase;
         padding: .3em;
         font-size: 1em;
         text-align: left;
     }
     
-    .slide-content a {
-        text-transform: uppercase !important;
-    }
-    
     .slide-content button {
-        text-transform: uppercase;
         font-weight: bold;
     }
     
@@ -97,7 +95,6 @@
         padding: .3em;
         color: white;
         font-weight: bold;
-        text-transform: uppercase;
         font-size: 2em;
         text-align: left;
         background: rgba(255, 0, 0, 0.3);
@@ -119,7 +116,6 @@
         padding: .3em;
         text-align: left;
         font-weight: bold;
-        text-transform: uppercase;
     }
     
     .slide-content-gray {
@@ -130,8 +126,8 @@
         text-align: left;
         font-size: .8em;
         font-weight: bold;
-        text-transform: uppercase;
     }
+    /* HOME */
     
     #homeSection {
         background: url('assets/track3.jpg') center center no-repeat;
@@ -141,17 +137,13 @@
     #homeSection a {
         color: white;
     }
-    
-    #homeSection .slide-content {}
+    /* STORY */
     
     #storySection {
         background: none;
         background-color: none;
     }
-    
-    #storySection .slide-content {}
-    
-    #storySection .slide-title {}
+    /* CALENDAR */
     
     #calendarSection p {
         margin-bottom: 0px;
@@ -170,14 +162,15 @@
         border: 2px solid black;
         border-radius: 5px;
     }
+    /* ABOUT */
     
     #aboutSection h2 {
         font-size: 1em;
     }
+    /* OVERRIDES */
     
     .fp-tooltip {
         color: black !important;
-        text-transform: uppercase !important;
         font-weight: bold;
     }
     
@@ -193,7 +186,8 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#home" data-menuanchor="home"> <img src="assets/logo.jpg" width="30" height="30" alt=""> <!-- <span class="badge badge-default">beta</span> --></a>
+        <a class="navbar-brand" href="#home" data-menuanchor="home"> <img src="assets/logo.jpg" width="30" height="30" alt="">
+            <!-- <span class="badge badge-default">beta</span> --></a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -373,10 +367,10 @@
                 <div class="row mt-5 text-center">
                     <form method="POST" class="col" action="http://formspree.io/info@miniautodromoteramo.it">
                         <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="La tua email">
+                            <input type="email" name="email" class="form-control" placeholder="LA TUA EMAIL">
                         </div>
                         <div class="form-group">
-                            <textarea name="message" class="form-control" cols=40 rows=5 placeholder="Il tuo messaggio"></textarea>
+                            <textarea name="message" class="form-control" cols=40 rows=5 placeholder="IL TUO MESSAGGIO"></textarea>
                         </div>
                         <button class="col btn btn-outline-amt" type="submit">Invia</button>
                     </form>
@@ -386,8 +380,6 @@
     </div>
     <script type="text/javascript">
     $(document).ready(function() {
-
-
         $("#menu").on("click", "a", null, function() {
             $("#navbarCollapse").collapse('hide')
         });
@@ -423,8 +415,6 @@
                 'Contatti'
             ]
         });
-
-        //$("#aboutSection").css('height', 'auto');
     });
     </script>
 </body>
