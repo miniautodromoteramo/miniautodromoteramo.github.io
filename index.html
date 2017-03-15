@@ -30,7 +30,8 @@
     <title>Miniautodromo di Teramo</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css" integrity="sha256-r2glH03VUY1R1G+7PwWdfL/NaTKpbInwaZFGiohbo4A=" crossorigin="anonymous" />    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.css" integrity="sha256-r2glH03VUY1R1G+7PwWdfL/NaTKpbInwaZFGiohbo4A=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
@@ -48,7 +49,7 @@
     p {
         font-size: 1.2em;
     }
-
+    
     button {
         text-transform: uppercase !important;
     }
@@ -127,6 +128,7 @@
         font-weight: bold;
     }
     /* HOME */
+    
     #homeSection {
         background: url('assets/track.jpg') center center no-repeat;
         background-size: cover;
@@ -135,14 +137,14 @@
     #homeSection a {
         color: white;
     }
-
     /* STORY */
+    
     #storySection {
         background: none;
         background-color: none;
     }
-
     /* CALENDAR */
+    
     #calendarSection p {
         margin-bottom: 0px;
         margin-top: 0px;
@@ -160,13 +162,13 @@
         border: 2px solid black;
         border-radius: 5px;
     }
-
     /* ABOUT */
+    
     #aboutSection h2 {
         font-size: 1em;
     }
-
     /* OVERRIDES */
+    
     .fp-tooltip {
         color: black !important;
         font-weight: bold;
@@ -379,7 +381,10 @@
     </div>
     <script type="text/javascript">
     $(document).ready(function() {
-        $("#menu").on("click", "a", null, function() {
+        $("#menu").on("click", "a", null, function(event) {
+            let element = $(event.target);
+            $("#menu .nav-item").removeClass('active');
+            element.parent().addClass('active');
             $("#navbarCollapse").collapse('hide')
         });
 
@@ -412,7 +417,13 @@
                 'La Pista',
                 'Informazioni',
                 'Contatti'
-            ]
+            ],
+            onLeave: function(index, nextIndex, direction) {
+                $("#menu .nav-item").removeClass('active');
+                if (nextIndex != 1) {
+                    $("#menu .nav-item").eq((nextIndex - 2) % $("#menu .nav-item").length).addClass('active');
+                }
+            }
         });
     });
     </script>
