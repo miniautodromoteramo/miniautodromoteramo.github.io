@@ -40,159 +40,166 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.min.js" integrity="sha256-r80qU2FgO31x7HtK2BQxYOQxPb45x+eKKhzA0OrepyM=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.extensions.min.js" integrity="sha256-h15L/g+XIMkwrCo+p9PYghNB2eKEYnjfa1GGxRqLUiY=" crossorigin="anonymous"></script>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-98241078-1', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-98241078-1', 'auto');
+        ga('send', 'pageview');
     </script>
     <style>
-    body {
-        color: white;
-        font-family: 'Open Sans', sans-serif !important;
-        text-transform: uppercase;
-    }
-    
-    p {
-        font-size: 1.2em;
-    }
-    
-    button {
-        text-transform: uppercase !important;
-    }
-    
-    a:hover {
-        color: white !important;
-    }
-    
-    #fullpage {
-        margin-top: 54px;
-    }
-    
-    .btn-outline-amt {
-        color: white;
-        background-image: none;
-        background-color: transparent;
-        border-color: white;
-        border: 2px solid;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    
-    .slide-title {
-        color: black;
-        font-weight: bold;
-        margin-top: 1em;
-        font-size: 1.8em;
-    }
-    
-    .slide-content {
-        color: black;
-        padding: .3em;
-        font-size: 1em;
-        text-align: left;
-    }
-    
-    .slide-content button {
-        font-weight: bold;
-    }
-    
-    .slide-content-red {
-        display: table;
-        padding: .3em;
-        color: white;
-        font-weight: bold;
-        font-size: 2em;
-        text-align: left;
-        background: rgba(255, 0, 0, 0.3);
-        line-height: 1.5em;
-    }
-    
-    .slide-content-white {
-        display: table;
-        padding: .3em;
-        color: #b02e0e;
-        font-weight: bold;
-        text-align: left;
-        background: rgba(255, 255, 255, 0.3);
-    }
-    
-    .slide-content-blue {
-        background: rgba(2, 90, 165, 0.5);
-        display: table;
-        color: #f7f7f9;
-        padding: .3em;
-        font-size: 1.2em;
-        line-height: 1.5em;
-        text-align: left;
-        font-weight: bold;
-    }
-    
-    .slide-content-gray {
-        background: rgba(41, 43, 44, 0.5);
-        display: table;
-        color: white;
-        padding: .3em;
-        text-align: left;
-        font-size: .8em;
-        font-weight: bold;
-    }
-    /* HOME */
-    
-    #homeSection {
-        background: url('assets/track.jpg') center center no-repeat;
-        background-size: cover;
-    }
-    
-    #homeSection a {
-        color: white;
-    }
-    /* STORY */
-    
-    #storySection {
-        background: none;
-        background-color: none;
-    }
-    /* CALENDAR */
-    
-    #calendarSection p {
-        margin-bottom: 0px;
-        margin-top: 0px;
-    }
-    
-    #calendarSection .race {
-        margin-bottom: 5px;
-        background: #e9e9e9;
-        padding: 1em;
-        margin-bottom: 1em;
-    }
-    
-    #calendarSection .open {
-        background: white;
-        border: 2px solid black;
-    }
-    /* ABOUT */
-    
-    #aboutSection h2 {
-        font-size: 1em;
-    }
-    /* OVERRIDES */
-    
-    .fp-tooltip {
-        color: black !important;
-        font-weight: bold;
-    }
-    
-    .card {
-        border-radius: 0px;
-        border: 2px solid black;
-    }
-
-    .red {
-        color: #971a20;
-    }
+        body {
+            color: white;
+            font-family: 'Open Sans', sans-serif !important;
+            text-transform: uppercase;
+        }
+        
+        p {
+            font-size: 1.2em;
+        }
+        
+        button {
+            text-transform: uppercase !important;
+        }
+        
+        a:hover {
+            color: white !important;
+        }
+        
+        #fullpage {
+            margin-top: 54px;
+        }
+        
+        .btn-outline-amt {
+            color: white;
+            background-image: none;
+            background-color: transparent;
+            border-color: white;
+            border: 2px solid;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .slide-title {
+            color: black;
+            font-weight: bold;
+            margin-top: 1em;
+            font-size: 1.8em;
+        }
+        
+        .slide-content {
+            color: black;
+            padding: .3em;
+            font-size: 1em;
+            text-align: left;
+        }
+        
+        .slide-content button {
+            font-weight: bold;
+        }
+        
+        .slide-content-red {
+            display: table;
+            padding: .3em;
+            color: white;
+            font-weight: bold;
+            font-size: 2em;
+            text-align: left;
+            background: rgba(255, 0, 0, 0.3);
+            line-height: 1.5em;
+        }
+        
+        .slide-content-white {
+            display: table;
+            padding: .3em;
+            color: #b02e0e;
+            font-weight: bold;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .slide-content-blue {
+            background: rgba(2, 90, 165, 0.5);
+            display: table;
+            color: #f7f7f9;
+            padding: .3em;
+            font-size: 1.2em;
+            line-height: 1.5em;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .slide-content-gray {
+            background: rgba(41, 43, 44, 0.5);
+            display: table;
+            color: white;
+            padding: .3em;
+            text-align: left;
+            font-size: .8em;
+            font-weight: bold;
+        }
+        /* HOME */
+        
+        #homeSection {
+            background: url('assets/track.jpg') center center no-repeat;
+            background-size: cover;
+        }
+        
+        #homeSection a {
+            color: white;
+        }
+        /* STORY */
+        
+        #storySection {
+            background: none;
+            background-color: none;
+        }
+        /* CALENDAR */
+        
+        #calendarSection p {
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        
+        #calendarSection .race {
+            margin-bottom: 5px;
+            background: #e9e9e9;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        
+        #calendarSection .open {
+            background: white;
+            border: 2px solid black;
+        }
+        /* ABOUT */
+        
+        #aboutSection h2 {
+            font-size: 1em;
+        }
+        /* OVERRIDES */
+        
+        .fp-tooltip {
+            color: black !important;
+            font-weight: bold;
+        }
+        
+        .card {
+            border-radius: 0px;
+            border: 2px solid black;
+        }
+        
+        .red {
+            color: #971a20;
+        }
     </style>
 </head>
 
@@ -264,14 +271,13 @@
                         <div class="mt-3">
                             <a role="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd0baQGRm4bEIc4KgpnnE2IsdAy8UolA-B1-rQxzJUd73OWsQ/viewform?usp=sf_link" target="_blank" class="btn btn-danger">Iscrizione</a>
                         </div>
-                         <div class="mt-3">
-                            <a role="button" href="https://docs.google.com/spreadsheets/d/1j4_R-G1Dc4t50OWwZJiWxfYOHi3jSyDg_dBxt4j2a7A/edit?usp=sharing" target="_blank" class="btn btn-sm btn-warning">Lista Iscritti</a>
-                         </div>
                         <div class="mt-3">
-                            <a role="button" href="whatsapp://send?text=Miniautodromo di Teramo (http://www.miniautodromoteramo.it) | 
-                            4 Giugno - Trofeo della Porchetta | Iscrizione: https://goo.gl/QBqw5V | Iscritti: https://goo.gl/MRUF55" data-text="4 Giugno - Trofeo della Porchetta" data-href="" class="mr-2 btn btn-sm btn-success">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i> 
-                                Condividi su Whatsapp
+                            <a role="button" href="https://docs.google.com/spreadsheets/d/1j4_R-G1Dc4t50OWwZJiWxfYOHi3jSyDg_dBxt4j2a7A/edit?usp=sharing" target="_blank" class="btn btn-sm btn-warning">Lista Iscritti</a>
+                        </div>
+                        <div class="mt-3">
+                            <a role="button" href="whatsapp://send?text=Miniautodromo di Teramo (http://www.miniautodromoteramo.it) | 4 Giugno - Trofeo della Porchetta | Iscrizione: https://goo.gl/QBqw5V | Iscritti: https://goo.gl/MRUF55" data-text="4 Giugno - Trofeo della Porchetta"
+                                data-href="" class="mr-2 btn btn-sm btn-success">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i> Condividi su Whatsapp
                             </a>
                             <!--<a role="button" href="https://www.facebook.com/sharer/sharer.php?u=Miniautodromo di Teramo (http://www.miniautodromoteramo.it) | 4 Giugno - Trofeo della Porchetta | Iscrizione: https://goo.gl/QBqw5V | Iscritti: https://goo.gl/MRUF55" target="_blank" class="mr-1 btn btn-sm btn-primary">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -303,7 +309,8 @@
                     <p>
                         Individuata la zona in cui costruirlo e fatta richiesta al comune di Teramo per un terreno adatto, il gruppo, autofinanziandosi, iniziò i lavori.
                     </p>
-                    <p>Dopo circa un anno di duro lavoro e sacrifici il sogno prese vita e finalmente il miniautodromo iniziò a funzionare ospitando gare di tutti i livelli, dai campionati regionali alle selezioni per i campionati del mondo. Gli anni 90 segnarono purtroppo un periodo di decadimento per il miniautodrom che venne per un po' dimenticato, ma a maggio 2007 il Comune di Teramo dà il via al ripristino totale dell’impianto, variando il percorso per ragioni di sicurezza.
+                    <p>Dopo circa un anno di duro lavoro e sacrifici il sogno prese vita e finalmente il miniautodromo iniziò a funzionare ospitando gare di tutti i livelli, dai campionati regionali alle selezioni per i campionati del mondo. Gli anni 90
+                        segnarono purtroppo un periodo di decadimento per il miniautodrom che venne per un po' dimenticato, ma a maggio 2007 il Comune di Teramo dà il via al ripristino totale dell’impianto, variando il percorso per ragioni di sicurezza.
                     </p>
                     <p>Il rettilineo viene spostato di fronte al palco di pilotaggio e viene fatta una variante al tracciato aumentando la lunghezza della pista di circa 40 mt.</p>
                     <p>Ed ora... si corre!!</p>
@@ -324,7 +331,8 @@
                     <p>La zona box si sviluppa su circa 70 metri, al cui interno ci sono oltre 60 box coperti (circa 1 metro a dispozione per ogni modellista) con presa di corrente a 220v.
                         <p>In pista è presente anche la presa di corrente a 12v nelle due zone tornitura, con aria compressa.
                         </p>
-                        <p>L'impianto dispone di servizio cronometraggio<!-- e rilevatore di velocità sul rettilineo principale-->.
+                        <p>L'impianto dispone di servizio cronometraggio
+                            <!-- e rilevatore di velocità sul rettilineo principale-->.
                         </p>
                     </p>
                 </div>
@@ -367,7 +375,8 @@
                         <h5 class="font-weight-bold mb-3 red">Dove Siamo</h5>
                         <p>Puoi trovarci al seguente indirizzo:</p>
                         <p><b>SS 81, Bivio Putignano, 64100 Teramo</b></p>
-                        <p>Ci trovi anche su <a role="button" target="_blank" href="https://www.google.it/maps/place/Miniautodromo+Teramo/@42.6797519,13.6697243,17z/data=!3m1!4b1!4m5!3m4!1s0x1331e7729101dd69:0x1d0629748860b58c!8m2!3d42.679748!4d13.671913" class="btn btn-sm btn-outline-primary"><i class="fa fa-map-marker fa-1x" aria-hidden="true"></i> Google Maps</a> !</p>
+                        <p>Ci trovi anche su <a role="button" target="_blank" href="https://www.google.it/maps/place/Miniautodromo+Teramo/@42.6797519,13.6697243,17z/data=!3m1!4b1!4m5!3m4!1s0x1331e7729101dd69:0x1d0629748860b58c!8m2!3d42.679748!4d13.671913"
+                                class="btn btn-sm btn-outline-primary"><i class="fa fa-map-marker fa-1x" aria-hidden="true"></i> Google Maps</a> !</p>
                     </div>
                 </div>
                 <div class="mt-3 mb-5 slide-content">
@@ -411,52 +420,52 @@
         </div>
     </div>
     <script type="text/javascript">
-    $(document).ready(function() {
-        $("#menu").on("click", "a", null, function(event) {
-            let element = $(event.target);
-            $("#menu .nav-item").removeClass('active');
-            element.parent().addClass('active');
-            $("#navbarCollapse").collapse('hide')
-        });
-
-        $(".navbar-brand").on("click", function(event) {
-            event.preventDefault();
-            $("#navbarCollapse").collapse('hide')
-            $.fn.fullpage.moveTo('home');
-            return false;
-        });
-
-        $("body").on("click", function(event) {
-            let element = $(event.target);
-            if (element.parents("#menu").length) {
-                return;
-            } else {
-                $("#navbarCollapse").collapse('hide');
-            }
-        })
-
-        $('#fullpage').fullpage({
-            anchors: ['home', 'calendar', 'story', 'track', 'about', 'contacts'],
-            sectionsColor: ['#a31e1b', 'white', 'white', 'white', 'white', '#a31e1b'],
-            autoScrolling: true,
-            scrollOverflow: true,
-            navigation: false,
-            navigationTooltips: [
-                'Home',
-                'Calendario Gare',
-                'Storia',
-                'La Pista',
-                'Informazioni',
-                'Contatti'
-            ],
-            onLeave: function(index, nextIndex, direction) {
+        $(document).ready(function() {
+            $("#menu").on("click", "a", null, function(event) {
+                let element = $(event.target);
                 $("#menu .nav-item").removeClass('active');
-                if (nextIndex != 1) {
-                    $("#menu .nav-item").eq((nextIndex - 2) % $("#menu .nav-item").length).addClass('active');
+                element.parent().addClass('active');
+                $("#navbarCollapse").collapse('hide')
+            });
+
+            $(".navbar-brand").on("click", function(event) {
+                event.preventDefault();
+                $("#navbarCollapse").collapse('hide')
+                $.fn.fullpage.moveTo('home');
+                return false;
+            });
+
+            $("body").on("click", function(event) {
+                let element = $(event.target);
+                if (element.parents("#menu").length) {
+                    return;
+                } else {
+                    $("#navbarCollapse").collapse('hide');
                 }
-            }
+            })
+
+            $('#fullpage').fullpage({
+                anchors: ['home', 'calendar', 'story', 'track', 'about', 'contacts'],
+                sectionsColor: ['#a31e1b', 'white', 'white', 'white', 'white', '#a31e1b'],
+                autoScrolling: true,
+                scrollOverflow: true,
+                navigation: false,
+                navigationTooltips: [
+                    'Home',
+                    'Calendario Gare',
+                    'Storia',
+                    'La Pista',
+                    'Informazioni',
+                    'Contatti'
+                ],
+                onLeave: function(index, nextIndex, direction) {
+                    $("#menu .nav-item").removeClass('active');
+                    if (nextIndex != 1) {
+                        $("#menu .nav-item").eq((nextIndex - 2) % $("#menu .nav-item").length).addClass('active');
+                    }
+                }
+            });
         });
-    });
     </script>
 </body>
 
