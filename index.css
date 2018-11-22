@@ -1,0 +1,158 @@
+body {
+    color: white;
+    font-family: 'Open Sans', sans-serif !important;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+button {
+    text-transform: uppercase !important;
+}
+
+a:hover {
+    color: white !important;
+}
+
+#fullpage {
+    margin-top: 54px;
+}
+
+.btn-outline-amt {
+    color: white;
+    background-image: none;
+    background-color: transparent;
+    border-color: white;
+    border: 2px solid;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.slide-title {
+    color: black;
+    font-weight: bold;
+    margin-top: 1em;
+    font-size: 1.8em;
+}
+
+.slide-content {
+    color: black;
+    padding: .3em;
+    font-size: 1em;
+    text-align: left;
+}
+
+.slide-content button {
+    font-weight: bold;
+}
+
+.slide-content-red {
+    display: table;
+    padding: .3em;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: left;
+    background: rgba(255, 0, 0, 0.3);
+    line-height: 1.5em;
+}
+
+.slide-content-white {
+    display: table;
+    padding: .3em;
+    color: #b02e0e;
+    font-weight: bold;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.slide-content-blue {
+    background: rgba(2, 90, 165, 0.5);
+    display: table;
+    color: #f7f7f9;
+    padding: .3em;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    text-align: left;
+    font-weight: bold;
+}
+
+.slide-content-gray {
+    background: rgba(41, 43, 44, 0.5);
+    display: table;
+    color: white;
+    padding: .3em;
+    text-align: left;
+    font-size: .8em;
+    font-weight: bold;
+}
+/* HOME */
+
+#homeSection {
+    background: url('assets/track_low.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+#homeSection a {
+    color: white;
+}
+/* STORY */
+
+#storySection {
+    background: none;
+    background-color: none;
+}
+/* CALENDAR */
+
+#calendarSection p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#calendarSection .race {
+    margin-bottom: 5px;
+    background: #e9e9e9;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#calendarSection .open {
+    background: white;
+    border: 2px solid black;
+}
+/* ABOUT */
+
+#aboutSection h2 {
+    font-size: 1em;
+}
+/* OVERRIDES */
+
+.fp-tooltip {
+    color: black !important;
+    font-weight: bold;
+}
+
+.card {
+    border-radius: 0px;
+    border: 2px solid black;
+}
+
+.red {
+    color: #971a20;
+}
+
+.last-event {
+    border:4px solid #c9302c;
+    border-radius: 5px;
+    width: 98%;
+    margin: 0 auto;
+    color: black;
+    padding: .3em;
+    font-size: 1.5em;
+    background-color: white !important;
+    font-weight: bold;
+    margin-bottom: 2em;
+    display: inline-block;
+}

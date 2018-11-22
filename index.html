@@ -48,183 +48,9 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.extensions.min.js" integrity="sha256-h15L/g+XIMkwrCo+p9PYghNB2eKEYnjfa1GGxRqLUiY="
         crossorigin="anonymous"></script>
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-        ga('create', 'UA-98241078-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-    <style>
-        body {
-            color: white;
-            font-family: 'Open Sans', sans-serif !important;
-            text-transform: uppercase;
-        }
-        
-        p {
-            font-size: 1.2em;
-        }
-        
-        button {
-            text-transform: uppercase !important;
-        }
-        
-        a:hover {
-            color: white !important;
-        }
-        
-        #fullpage {
-            margin-top: 54px;
-        }
-        
-        .btn-outline-amt {
-            color: white;
-            background-image: none;
-            background-color: transparent;
-            border-color: white;
-            border: 2px solid;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .slide-title {
-            color: black;
-            font-weight: bold;
-            margin-top: 1em;
-            font-size: 1.8em;
-        }
-        
-        .slide-content {
-            color: black;
-            padding: .3em;
-            font-size: 1em;
-            text-align: left;
-        }
-        
-        .slide-content button {
-            font-weight: bold;
-        }
-        
-        .slide-content-red {
-            display: table;
-            padding: .3em;
-            color: white;
-            font-weight: bold;
-            font-size: 2em;
-            text-align: left;
-            background: rgba(255, 0, 0, 0.3);
-            line-height: 1.5em;
-        }
-        
-        .slide-content-white {
-            display: table;
-            padding: .3em;
-            color: #b02e0e;
-            font-weight: bold;
-            text-align: left;
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
-        .slide-content-blue {
-            background: rgba(2, 90, 165, 0.5);
-            display: table;
-            color: #f7f7f9;
-            padding: .3em;
-            font-size: 1.2em;
-            line-height: 1.5em;
-            text-align: left;
-            font-weight: bold;
-        }
-        
-        .slide-content-gray {
-            background: rgba(41, 43, 44, 0.5);
-            display: table;
-            color: white;
-            padding: .3em;
-            text-align: left;
-            font-size: .8em;
-            font-weight: bold;
-        }
-        /* HOME */
-        
-        #homeSection {
-            background: url('assets/track_low.jpg') center center no-repeat;
-            background-size: cover;
-        }
-        
-        #homeSection a {
-            color: white;
-        }
-        /* STORY */
-        
-        #storySection {
-            background: none;
-            background-color: none;
-        }
-        /* CALENDAR */
-        
-        #calendarSection p {
-            margin-bottom: 0px;
-            margin-top: 0px;
-        }
-        
-        #calendarSection .race {
-            margin-bottom: 5px;
-            background: #e9e9e9;
-            padding: 1em;
-            margin-bottom: 1em;
-        }
-        
-        #calendarSection .open {
-            background: white;
-            border: 2px solid black;
-        }
-        /* ABOUT */
-        
-        #aboutSection h2 {
-            font-size: 1em;
-        }
-        /* OVERRIDES */
-        
-        .fp-tooltip {
-            color: black !important;
-            font-weight: bold;
-        }
-        
-        .card {
-            border-radius: 0px;
-            border: 2px solid black;
-        }
-        
-        .red {
-            color: #971a20;
-        }
-        
-        .last-event {
-            border:2px solid rgba(92, 184, 92, 0.68);
-            border-radius: 5px;
-            width: 98%;
-            margin: 0 auto;
-            color: black;
-            padding: .3em;
-            font-size: 1.5em;
-            font-weight: bold;
-            margin-bottom: 2em;
-            display: inline-block;
-        }
-    </style>
+    <script src="ga.js"></script>
+   <link href="index.css" rel="stylesheet">
 </head>
-
 <body>
     <nav id="menu" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -286,50 +112,49 @@
         <div class="section" id="calendarSection">
             <div class="slide container">
                 <h1 class="slide-title">Eventi</h1>
+                <div class="race last-event">
+                    <h1>Trofeo di Natale</h1>
+                    <h2>9 Dicembre 2018</h2>
+                    <p>
+                        <span class="badge badge-default">1/10 Scoppio</span>
+                        <span class="badge badge-default">1/10 Elettrico</span>
+                        <span class="badge badge-default">1/8 Scoppio</span>
+                    </p>
+                    <p class="mt-1">Regolamento AMSCI</p>
+                    <p>Iscrizione: 25€</p>
+                    <div class="mt-3">
+                        <a role="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd0baQGRm4bEIc4KgpnnE2IsdAy8UolA-B1-rQxzJUd73OWsQ/viewform?usp=sf_link"
+                            target="_blank" class="btn btn-danger">Iscrizione</a>
+                    </div>
+                    <div class="mt-3">
+                        <a role="button" href="https://docs.google.com/spreadsheets/d/1j4_R-G1Dc4t50OWwZJiWxfYOHi3jSyDg_dBxt4j2a7A/edit?usp=sharing"
+                            target="_blank" class="btn btn-sm btn-warning">Lista Iscritti</a>
+                    </div>
+                    <div class="mt-3">
+                        <a role="button" href="whatsapp://send?text=Miniautodromo di Teramo (http://www.miniautodromoteramo.it) | 9 Dicembre - Trofeo di Natale | Iscrizione: https://goo.gl/QBqw5V | Iscritti: https://goo.gl/MRUF55"
+                            data-text="4 Giugno - Trofeo della Porchetta" data-href="" class="mr-2 btn btn-sm btn-success">
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i> Condividi su Whatsapp
+                        </a>
+                    </div>
+                    <!--  <div class="mt-3">
+                        <a role="button" href="assets/040617_flyer.jpg" target="_blank" class="btn btn-sm btn-info">Locandina</a>
+                    </div> -->
+                    <!--  <div class="mt-3">
+                        <a role="button" href="https://www.facebook.com/pg/miniautodromoteramo/photos/?tab=album&album_id=1363332377094082"
+                            target="_blank" class="btn btn-sm btn-info">Foto</a>
+                    </div> -->
+                    <div class="mt-3">
+                        <a role="button" href="#contacts" class="mr-2 btn btn-sm btn-info">
+                            Contattaci
+                        </a>
+                    </div>
+                </div>
                 <div class="slide-content mb-5">
                     <div class="race">
                         <h1>Endurance 2 Ore 1/10 Touring Nitro</h1>
                         <h2>4 Novembre 2018</h2>
                         <p>
                             <span class="badge badge-danger">Gara Annullata causa Pioggia</span>
-                        </p>
-                       <!--  <br />
-                        <p><small>Iscrizione: 25€ a Pilota</small>
-                        </p>
-                        <br />
-                        <p>
-                            <b>Regolamento</b>
-                            <br />
-                            Il Team è composto da due Piloti.
-                            <br />
-                            Ogni pilota del Team è anche meccanico e raccoglitore del compagno di squadra. Non sono
-                            ammessi meccanici esterni.
-                            Possono essere usati anche più di due transponders per Team.
-                            <br />
-                            <br />
-                            Qualifiche:
-                            <br />
-                            6 qualifiche da 4 minuti. Il team può decidere internamente chi far correre ad ogni
-                            batteria. Un solo pilota per
-                            batteria per team. La posizione in griglia è decisa dalla migliore delle 6 batterie.
-                            <br />
-                            <br />
-                            Gara:
-                            <br />
-                            2 ore. Ci si può alternare a piacimento. Durante il cambio non si deve mai calpestare
-                            contemporaneamente qualsiasi
-                            spazio che compone il palco. Occorre aspettare che il compagnio sia sceso completamente dal
-                            palco.
-                            <br />
-                            <br />
-                            Il regolamento può variare (poco).
-                            <br />
-                            <br />
-                            L'iscrizione è una Promessa. E' richiesta massima serietà.
-                            <br />
-                            Comunicare tempestivamente se
-                            non si è in grado di mantenere
-                            la promessa.
                         </p>
                         <div class="mt-3">
                             <a role="button" href="https://goo.gl/ZsRSG3" target="_blank" class="btn btn-danger">Iscrizione</a>
@@ -362,33 +187,10 @@
                         <h2>3 Dicembre 2017</h2>
                         <p>
                             <span class="badge badge-danger">Gara Annullata causa Pioggia</span>
-                            <!--     <span class="badge badge-default">1/10 Touring Elettrico</span>
-                            <span class="badge badge-default">1/10 Formula Elettrico</span>
-                            <span class="badge badge-default">1/8 Pista Scoppio</span> -->
                         </p>
-                        <!-- <p class="mt-1">Regolamento AMSCI</p>
-                        <p>Iscrizione: 25€ (Più categorie? Paghi per una!)</small>
-                        </p>
-                        <div class="mt-3">
-                            <a role="button" href="https://goo.gl/ZsRSG3" target="_blank" class="btn btn-danger">Iscrizione</a>
-                        </div>
-                        <div class="mt-3">
-                            <a role="button" href="https://goo.gl/ED7mZ2" target="_blank" class="btn btn-sm btn-warning">Lista Iscritti</a>
-                        </div> -->
-                        <!--  <div class="mt-3">
-                            <a role="button" href="whatsapp://send?text=Miniautodromo di Teramo (http://www.miniautodromoteramo.it) | 3 Dicembre - Trofeo di Natale | Iscrizione: https://goo.gl/QBqw5V | Iscritti: https://goo.gl/MRUF55" data-text="3 Dicembre - Trofeo di Natale" data-href=""
-                                class="mr-2 btn btn-sm btn-success">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i> Condividi su Whatsapp
-                            </a>
-                        </div> -->
                         <div class="mt-3">
                             <a role="button" href="assets/031217_flyer.jpg" target="_blank" class="btn btn-sm btn-info">Locandina</a>
                         </div>
-                        <!--  <div class="mt-3">
-                            <a role="button" href="#contacts" class="mr-2 btn btn-sm btn-secondary">
-                                Contattaci
-                            </a>
-                        </div> -->
                     </div>
                     <div class="race">
                         <h1>Trofeo VMR</h1>
@@ -430,57 +232,9 @@
                     <div class="race">
                         <h1>1° Giro Mangiato</h1>
                         <h2>Venerdì 30 Giugno 2017</h2>
-                        <!-- <p>
-                            <span class="badge badge-default">Crono Acceso</span>
-                            <span class="badge badge-default">Time Attack</span>
-                            <span class="badge badge-default">Pista Illuminata di Notte</span>
-                            <span class="badge badge-default">Arrosticini</span>
-                            <span class="badge badge-default">Compagnia</span>
-                            <span class="badge badge-default">Non è una Gara</span>
-                        </p>
-                        <p class="mt-1">Giriamo e mangiamo gli arrosticini in compagnia!!!!<br />
-                            Dalle 20 la pista sarà anche illuminata.<br /><br/>
-
-                            Programma:<br />
-                            dalle 17 alle 20<br/>
-                            Scoppio ed Elettrico<br/>
-                            dalle 20 alle 21<br/>
-                            Cena<br/>
-                            dalle 21 in poi<br/>
-                            Elettrico<br/>
-                        </p>
-                        <br />
-                        <p>Ingresso + Cena: 15€</p>
-                        <div class="mt-3">
-                            <a role="button" href="https://docs.google.com/forms/d/e/1FAIpQLSd0baQGRm4bEIc4KgpnnE2IsdAy8UolA-B1-rQxzJUd73OWsQ/viewform?usp=sf_link" 
-                            target="_blank" class="btn btn-danger">Iscrizione</a>
-                        </div>
-                        <div class="mt-3">
-                            <a role="button" href="https://docs.google.com/spreadsheets/d/1j4_R-G1Dc4t50OWwZJiWxfYOHi3jSyDg_dBxt4j2a7A/edit?usp=sharing"
-                                target="_blank" class="btn btn-sm btn-warning">Lista Iscritti</a>
-                        </div>
-                        <div class="mt-3">
-                            <a role="button" href="whatsapp://send?text=Miniautodromo di Teramo (http://www.miniautodromoteramo.it) | Venerdì 30 Giugno - 1° Giro Mangiato | Iscrizione: https://goo.gl/QBqw5V | Iscritti: https://goo.gl/MRUF55"
-                                data-text="30 Giugno - 1° Giro Mangiato" data-href="" class="mr-2 btn btn-sm btn-success">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i> Condividi su Whatsapp
-                            </a>
-                        </div>
-                        -->
                         <div class="mt-3">
                             <a role="button" href="assets/300617_flyer.jpg" target="_blank" class="btn btn-sm btn-info">Locandina</a>
                         </div>
-                        <!-- <div class="mt-3">
-                            <a role="button" href="https://www.facebook.com/events/1940971042854678/?ti=cl" target="_blank" class="btn btn-sm btn-primary">Evento Facebook</a>
-                        </div> -->
-                        <!-- <div class="mt-3">
-                            <a role="button" href="https://www.facebook.com/pg/miniautodromoteramo/photos/?tab=album&album_id=1363332377094082" target="_blank"
-                                class="btn btn-sm btn-info">Foto</a>
-                        </div> -->
-                        <!-- <div class="mt-3">
-                            <a role="button" href="#contacts" class="mr-2 btn btn-sm btn-secondary">
-                                Contattaci
-                            </a>
-                        </div> -->
                     </div>
                     <div class="race">
                         <h1>Trofeo della Porchetta</h1>
