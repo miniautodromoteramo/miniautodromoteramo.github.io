@@ -49,8 +49,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.4/jquery.fullpage.extensions.min.js" integrity="sha256-h15L/g+XIMkwrCo+p9PYghNB2eKEYnjfa1GGxRqLUiY="
         crossorigin="anonymous"></script>
     <script src="ga.js"></script>
-   <link href="index.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
 </head>
+
 <body>
     <nav id="menu" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse"
@@ -62,6 +63,10 @@
         </a>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a data-menuanchor="abbonamento" class="nav-link red" style="color: gold; font-weight: bold" href="#abbonamento">Abbonamento
+                        2019</a>
+                </li>
                 <li class="nav-item">
                     <a data-menuanchor="calendar" class="nav-link" href="#calendar">Eventi</a>
                 </li>
@@ -106,6 +111,34 @@
                         </a>
                     </div>
                     <p class="mt-3 slide-content-gray">Copyright © 2019 - Associazione Modellistica Teramana</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="abbonamentoSection">
+            <div class="slide container">
+                <h1 class="slide-title">Abbonamento 2019</h1>
+                <div class="slide-content">
+                    <p>
+
+                        Con l'abbonamento potrai godere dell'impianto ogni giorno senza nessun costo
+                        aggiuntivo.
+                    </p>
+
+                    <p>Avrai a disposizione le chiavi di ingresso e sarai totalmente indipendente.</p>
+
+                    <p style="font-weight: bold;">Ma soprattutto contribuirai a far vivere questo storico circuito!!!</p>
+
+                    <div style="background: white; padding: 1em; border-radius: 1em; ">
+
+                        <h5 class="font-weight-bold mb-3">Come fare?</h5>
+                        <p>Puoi fare un bonifico di <b>100€</b>
+                            al seguente IBAN <b>IT60K3608105138278138178146</b> con casuale <b>Abbonamento 2019</b> e comunicare l'avvenuta operazione
+                            via mail <a href="#contacts" style="font-weight: bold; color: #971a20;">qui</a>.
+                        </p>
+                        <p style="font-weight: bold;">
+                            Potrai quindi venire in pista a ritirare le nuove chiavi!
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -499,13 +532,14 @@
             })
 
             $('#fullpage').fullpage({
-                anchors: ['home', 'calendar', 'records', 'story', 'track', 'about', 'contacts'],
-                sectionsColor: ['#a31e1b', 'white', 'white', 'white', 'white', 'white', '#a31e1b'],
+                anchors: ['home', 'abbonamento', 'calendar', 'records', 'story', 'track', 'about', 'contacts'],
+                sectionsColor: ['#a31e1b', 'gold', 'white', 'white', 'white', 'white', 'white', '#a31e1b'],
                 autoScrolling: true,
                 scrollOverflow: true,
                 navigation: false,
                 navigationTooltips: [
                     'Home',
+                    'Abbonamento 2019',
                     'Eventi',
                     'Records',
                     'Storia',
