@@ -1,0 +1,3 @@
+F1:J1=CONCATENATE(COUNTIF(I3:I117;"1/10 Elettrico"); " 1/10 Elettriche + "; COUNTIF(I3:I117;"1/10 Scoppio"); " 1/10 Scoppio + "; COUNTIF(I3:I117;"1/8 Scoppio"); " 1/8 Scoppio + "; COUNTIF(I3:I117;"Rallycross Elettrico"); " Rallycross Elettrico + "; COUNTIF(I3:I117; "Rallycross Scoppio"); " Rallycross Scoppio = "; SUM(COUNTIF(I3:I117;"1/10 Elettrico");COUNTIF(I3:I117;"1/10 Scoppio");COUNTIF(I3:I117;"1/8 Scoppio");COUNTIF(I3:I117;"Rallycross Elettrico");COUNTIF(I3:I117; "Rallycross Scoppio")); " Cars")
+
+F3=sort(Iscrizioni!A2:E70; 4; TRUE)
