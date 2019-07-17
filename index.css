@@ -88,6 +88,8 @@ a:hover {
     font-size: .8em;
     font-weight: bold;
 }
+
+
 /* HOME */
 
 #homeSection {
@@ -98,12 +100,16 @@ a:hover {
 #homeSection a {
     color: white;
 }
+
+
 /* STORY */
 
 #storySection {
     background: none;
     background-color: none;
 }
+
+
 /* CALENDAR */
 
 #calendarSection p {
@@ -122,11 +128,15 @@ a:hover {
     background: white;
     border: 2px solid black;
 }
+
+
 /* ABOUT */
 
 #aboutSection h2 {
     font-size: 1em;
 }
+
+
 /* OVERRIDES */
 
 .fp-tooltip {
@@ -144,7 +154,7 @@ a:hover {
 }
 
 .last-event {
-    border:4px solid #c9302c;
+    border: 4px solid #c9302c;
     border-radius: 5px;
     width: 98%;
     margin: 0 auto;
@@ -155,4 +165,19 @@ a:hover {
     font-weight: bold;
     margin-bottom: 2em;
     display: inline-block;
+}
+
+.next-event {
+    width: auto;
+    float: left;
+    color: gold !important;
+    border: 2px solid gold;
+    padding: .3em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.next-event:hover {
+    color: gold !important;
+    text-decoration: none;
 }
