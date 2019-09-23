@@ -4,6 +4,15 @@ body {
     text-transform: uppercase;
 }
 
+body::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    content: url(track2.jpeg) url(track3.jpeg) url(track4.jpeg) url(track5.jpeg);
+}
+
 p {
     font-size: 1.2em;
 }
