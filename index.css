@@ -10,7 +10,7 @@ body::after {
     height: 0;
     overflow: hidden;
     z-index: -1;
-    content: url(track2.jpeg) url(track3.jpeg) url(track4.jpeg) url(track5.jpeg);
+    content: url('assets/track2.jpeg') url('assets/track3.jpeg') url('assets/track4.jpeg') url('assets/track5.jpeg');
 }
 
 p {
