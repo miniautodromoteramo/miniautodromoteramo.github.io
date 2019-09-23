@@ -8,6 +8,10 @@ p {
     font-size: 1.2em;
 }
 
+.bg-red {
+    background-color: #971a20 !important;
+}
+
 button {
     text-transform: uppercase !important;
 }
@@ -93,8 +97,8 @@ a:hover {
 /* HOME */
 
 #homeSection {
-    background: url('assets/track_low.jpg') center center no-repeat;
-    background-size: cover;
+    background: url('assets/track0.jpeg') center center no-repeat;
+    background-size: cover !important;
 }
 
 #homeSection a {

@@ -47,7 +47,7 @@
 </head>
 
 <body>
-    <nav id="menu" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <nav id="menu" class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-red">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -103,7 +103,7 @@
                         </a>
                     </div>
                     <p class="mt-3 slide-content-gray">Copyright © 2019 - Associazione Modellistica Teramana</p>
-                    <a class="next-event" href="/#calendar">Prossimo Evento: 22 Settembre</a>
+                    <!-- <a class="next-event" href="/#calendar">Prossimo Evento: 22 Settembre</a> -->
                 </div>
             </div>
         </div>
@@ -135,36 +135,12 @@
             <div class="slide container">
                 <h1 class="slide-title">Eventi</h1>
                 <div class="slide-content">
-                    <div class="race last-event">
+                    <div class="race">
                         <h1>Trofeo di Fine Estate</h1>
                         <h2>22 Settembre 2019</h2>
                         <p>
-                            <span class="badge badge-default">1/10 Touring Scoppio</span>
-                            <span class="badge badge-default">1/10 Touring Elettrico</span>
-                            <span class="badge badge-default">1/8 Pista Scoppio</span>
-                            <span class="badge badge-default">Rallycross Scoppio</span>
-                            <span class="badge badge-default">Rallycross Elettrico</span>
+                            <span class="badge badge-danger">Gara Annullata per Maltempo</span>
                         </p>
-                        <p class="mt-1">Regolamento AMSCI</p>
-                        <p>Iscrizione: 25€</p>
-                        <div class="mt-3">
-                            <a role="button" href="iscrizione.html" class="btn btn-danger">Iscrizione</a>
-                        </div>
-                        <div class="mt-3">
-                            <a role="button" href="iscritti.html" class="btn btn-sm btn-warning">Lista Iscritti</a>
-                        </div>
-                        <div class="mt-3">
-                            <a role="button" href="whatsapp://send?text=Miniautodromo di Teramo (http://www.miniautodromoteramo.it) | 22 Settembre - Trofeo di Fine Estate | Iscrizione: https://www.miniautodromoteramo.it/iscrizione.html | Iscritti: https://www.miniautodromoteramo.it/iscritti.html"
-                                data-text="22 Settembre - Trofeo di Fine Estate" data-href="" class="mr-2 btn btn-sm btn-success">
-                                <i class="fa fa-whatsapp" aria-hidden="true"></i> Condividi su Whatsapp
-                            </a>
-                        </div>
-                        <br />
-                        <div class="mt-3">
-                            <a role="button" href="#contacts" class="mr-2 btn btn-sm btn-secondary">
-                                Contattaci
-                            </a>
-                        </div>
                     </div>
                     <div class="race">
                         <h1>Trofeo Lola 1a10</h1>
@@ -659,6 +635,22 @@
         </div>
     </div>
     <script type="text/javascript">
+        let i = 1;
+
+        let x = () => {
+            setTimeout(function() {
+                $("#homeSection").css('background-size', 'cover');
+                $("#homeSection").css('background', 'url("assets/track' + i + '.jpeg") center center no-repeat');
+                i++;
+                if (i == 5) {
+                    i = 0;
+                }
+                x();
+            }, 4000);
+        };
+
+        x();
+
         $(document).ready(function() {
             $("#menu").on("click", "a", null, function(event) {
                 let element = $(event.target);
