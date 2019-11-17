@@ -123,21 +123,21 @@ a:hover {
 }
 
 
-/* CALENDAR */
+/* EVENTS */
 
-#calendarSection p {
+#eventsSection p {
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
-#calendarSection .race {
+#eventsSection .race {
     margin-bottom: 5px;
     background: #e9e9e9;
     padding: 1em;
     margin-bottom: 1em;
 }
 
-#calendarSection .open {
+#eventsSection .open {
     background: white;
     border: 2px solid black;
 }
