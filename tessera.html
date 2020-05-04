@@ -1,0 +1,126 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js"></script>
+</head>
+<style>
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<script>
+    var dd = {
+        background: function(currentPage, pageSize) {
+            return {
+                canvas: [{
+                    type: 'rect',
+                    x: 0,
+                    y: 0,
+                    w: pageSize.width,
+                    h: pageSize.height,
+                    color: 'white'
+                }, {
+                    type: 'rect',
+                    x: 0,
+                    y: 1.3,
+                    w: pageSize.width,
+                    h: 3.5,
+                    color: '#96191F'
+                }]
+            };
+        },
+        pageSize: {
+            width: 8.56,
+            height: 5.4
+        },
+        pageOrientation: 'landscape',
+        pageMargins: [0.2, 0.2, 0.2, 0],
+        content: [{
+            columns: [{
+                    image: 'data:image/png;base64,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',
+                    width: 1
+                },
+                [{
+                    text: 'Associazione Modellistica Teramana',
+                    fontSize: 0.3,
+                    color: "#96191F",
+                    margin: [0.2, 0.15, 0, 0],
+                    bold: true
+                }, {
+                    text: 'Tessera Socio 2020',
+                    fontSize: 0.3,
+                    color: "#96191F",
+                    margin: [0.2, 0, 0, 0],
+                    bold: true
+                }]
+            ]
+        }, {
+            columns: [
+                [{
+                    canvas: [{
+                        type: 'ellipse',
+                        x: 1,
+                        y: 1.85,
+                        r1: 1,
+                        r2: 1,
+                        color: 'white'
+                    }]
+                }, {
+                    text: "18",
+                    fontSize: 1,
+                    color: "black",
+                    alignment: "center",
+                    color: "#96191F",
+                    bold: true,
+                    margin: [-2.1, -1.6, 0, 0]
+                }],
+                [{
+                    text: 'de Ruvo',
+                    fontSize: 0.8,
+                    bold: true,
+                    color: "white",
+                    alignment: "center",
+                    margin: [-1.4, 1, 0, 0]
+                }, {
+                    text: 'Andrea',
+                    fontSize: 0.6,
+                    bold: true,
+                    color: "white",
+                    alignment: "center",
+                    margin: [-1.4, 0, 0, 0]
+                }]
+            ]
+        }, {
+            text: 'www.miniautodromoteramo.it',
+            fontSize: 0.3,
+            alignment: 'center',
+            margin: [0, 1.1, 0, 0],
+            color: "#96191F",
+            bold: true
+        }],
+        styles: {},
+        defaultStyle: {
+            fontSize: 0.5,
+            color: "white"
+        }
+    }
+
+    var pdf = pdfMake.createPdf(dd);
+    pdf.getDataUrl((dataUrl) => {
+        const targetElement = document.querySelector('#iframeContainer');
+        const iframe = document.createElement('iframe');
+        iframe.src = dataUrl + "#view=FitH";
+        targetElement.appendChild(iframe);
+    });
+
+    fetch('https://www.miniautodromoteramo.it/assets/icons/icon-72x72.png')
+        .then(response => response.blob())
+        .then(blob => {
+            var reader = new FileReader();
+            reader.onload = function() {
+                console.log(this.result)
+            };
+            reader.readAsDataURL(blob);
+        });
+</script>
+<div id="iframeContainer" style="width: 100%;"></div>
