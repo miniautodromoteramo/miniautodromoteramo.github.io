@@ -3,6 +3,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.13.0/js/md5.min.js"></script>
+    <script type="text/javascript" src="//mozilla.github.io/pdf.js/build/pdf.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.4/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous" />
 </head>
 <script>
@@ -158,7 +159,52 @@
             }
         };
 
-        let pdf = pdfMake.createPdf(dd).download("tessera.pdf");
+        let pdf = pdfMake.createPdf(dd);
+
+
+        pdf.getBase64((data) => {
+            /*  img = document.getElementById('card');
+             img.setAttribute('src', 'data:image/png;base64,' + data); */
+
+
+            var pageNumber = 1;
+            pdfjsLib.disableWorker = true;
+            pdfjsLib.getDocument({
+                data: atob(data)
+            }).promise.then(function(pdf) {
+                console.log('PDF loaded');
+
+                // Fetch the first page
+                var pageNumber = 1;
+                pdf.getPage(pageNumber).then(function(page) {
+                    console.log('Page loaded');
+
+                    var scale = 100;
+                    var viewport = page.getViewport({
+                        scale: scale
+                    });
+
+                    // Prepare canvas using PDF page dimensions
+                    var canvas = document.getElementById('card');
+                    var context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    // Render PDF page into canvas context
+                    var renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    var renderTask = page.render(renderContext);
+                    renderTask.promise.then(function() {
+                        console.log('Page rendered');
+                    });
+                });
+            }, function(reason) {
+                console.error(reason);
+            });
+        });
+
         /* pdf.getDataUrl((dataUrl) => {
             const targetElement = document.querySelector('#iframeContainer');
             const iframe = document.createElement('iframe');
@@ -179,6 +225,8 @@
                 reader.readAsDataURL(blob);
             }); */
 
+
+
     $(document).ready(function() {
         $("#downloadCard").click(function(event) {
             event.preventDefault();
@@ -188,7 +236,7 @@
 </script>
 <style>
     body {
-        background-color: #96191F
+        background-color: #f2f2f2;
     }
     
     iframe {
@@ -207,14 +255,14 @@
                         Nome
                     </label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight
-             focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Nome">
+             focus:outline-none focus:shadow-outline" id="name" type="text" value="andrea" placeholder="Nome">
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="surname">
                         Cognome
                     </label>
                     <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 
-            mb-3 leading-tight focus:outline-none focus:shadow-outline" id="surname" type="text" placeholder="Cognome">
+            mb-3 leading-tight focus:outline-none focus:shadow-outline" id="surname" type="text" value="de ruvo" placeholder="Cognome">
                 </div>
                 <div class="flex items-center justify-between">
                     <button id="downloadCard" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
@@ -222,8 +270,7 @@
                     </button>
                 </div>
             </form>
+            <canvas class="w-auto m-auto" id="card"></canvas>
         </div>
     </div>
-    <!--     <div id="iframeContainer" style="margin-top: 2em; width: 100%;"></div>
- -->
 </body>
