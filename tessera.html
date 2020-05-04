@@ -161,6 +161,12 @@
 
         let pdf = pdfMake.createPdf(dd);
 
+        var download = function() {
+            var link = document.createElement('a');
+            link.download = 'card.png';
+            link.href = document.getElementById('card').toDataURL()
+            link.click();
+        }
 
         pdf.getBase64((data) => {
             /*  img = document.getElementById('card');
@@ -198,6 +204,8 @@
                     var renderTask = page.render(renderContext);
                     renderTask.promise.then(function() {
                         console.log('Page rendered');
+                        download();
+
                     });
                 });
             }, function(reason) {
@@ -271,7 +279,7 @@
                     </button>
                 </div>
             </form>
-            <canvas class="w-auto m-auto" id="card"></canvas>
+            <canvas class="hidden" id="card"></canvas>
         </div>
     </div>
 </body>
