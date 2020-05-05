@@ -26,7 +26,8 @@
         "966325022cbe53bdbbfe928b47ccdded",
         "c43a04c67e0de69fa393f17d583e61d4",
         "890d2e99ed05f4fb55d78c5ef7911caf",
-        "74e9f3e1bca36af8dd6c11734fcc7287"
+        "74e9f3e1bca36af8dd6c11734fcc7287",
+        "c1b81b08873d5467d85559d6a62cdff1"
     ];
 
     let capitalize = function(pattern) {
@@ -49,7 +50,6 @@
         let arraySurname = surname.split(" ");
         surname = "";
         for (part of arraySurname) {
-            console.log(part);
             surname += capitalize(part) + " ";
         }
         surname = removeLastChar(surname);
@@ -178,12 +178,9 @@
             pdfjsLib.getDocument({
                 data: atob(data)
             }).promise.then(function(pdf) {
-                console.log('PDF loaded');
-
                 // Fetch the first page
                 var pageNumber = 1;
                 pdf.getPage(pageNumber).then(function(page) {
-                    console.log('Page loaded');
 
                     var scale = 100;
                     var viewport = page.getViewport({
@@ -203,7 +200,6 @@
                     };
                     var renderTask = page.render(renderContext);
                     renderTask.promise.then(function() {
-                        console.log('Page rendered');
                         download();
 
                     });
