@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.4.4/tailwind.min.css" integrity="sha256-CAI/7ThhltsmP2L2zKBYa7FknB3ZwFbD0nqL8FCdxdc=" crossorigin="anonymous" />
 </head>
 <script>
-    let data = [
+    var data = [
         "64520261b54c406b406515c9ffadfd37", //vincenzo f.
         "bee9b2d8771e1169a84377b01edd7736", //angelo di b.
         "7695192efba26ffb3ade7ddc72cd3bcc", //francesco c.
@@ -17,6 +17,7 @@
         "c1b81b08873d5467d85559d6a62cdff1", //claudio c.
         "1fcf075e8b31bf49b23fe13334c0420e", //emiliano e.
         "3bd2e392795366cf539af7a48a89f9f5", //maurizio l.
+        "0b2a2142ca04129aa8b2fe203e7e64ea", //luca g.,
         /* "a7d2e97b35d289e37693d2f6e0851f3b",
         "d96e7c73631ed31ac2cb8b2baa289ea6",
         "40bcc039f6a74dc12c24fcbc0db0735e",
@@ -36,7 +37,7 @@
         "c51978863a68eea0220656b8a7da2c2c",
         "fd12f9c6709a2aeedf194a1a59c0f9a3", //mdf
         "816ce20563f6cdaa2f7d6fb1f074e924", //fp
-        "0b2a2142ca04129aa8b2fe203e7e64ea", //lg,
+        
         "03e2ce63124a6947248a1dac1bd399d3", //lm,
         "5db5186b9d856f079416d61a75750f98", //eb
         "5f4122f7efb17560e76f923227a8b4ca", //ada
@@ -250,6 +251,8 @@
             event.preventDefault();
             download($("#name").val(), $("#surname").val());
         });
+
+        $("#numeroTessere").text(data.length)
     })
 </script>
 <style>
@@ -266,6 +269,11 @@
 <body>
     <div class="flex h-screen">
         <div class="m-auto w-1/2">
+            <br />
+            <br />
+            <p>Numero di Soci 2021: <span style="font-weight: bold;" id="numeroTessere"></span></p>
+            <br />
+            <br />
             <a href="index.html">Torna alla Home</a>
             <form class="m-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" id="cardForm">
                 <p class="text-center text-black text-2xl mt-4">Scarica la tua Tessera!</p>
