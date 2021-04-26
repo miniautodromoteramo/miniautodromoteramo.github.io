@@ -182,7 +182,7 @@ a:hover {
 
 .next-event {
     width: auto;
-    float: left;
+    /*  float: left; */
     color: gold !important;
     border: 2px solid gold;
     padding: .3em;
